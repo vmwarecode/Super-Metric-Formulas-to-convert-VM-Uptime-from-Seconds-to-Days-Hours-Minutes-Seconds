@@ -1,0 +1,4 @@
+Custom-GuestOSUptime-Days = floor(${this, metric=sys|osUptime_latest}/86400)
+Custom-GuestOSUptime-Hours = floor(${this, metric=sys|osUptime_latest}/3600)-(floor(${this, metric=sys|osUptime_latest}/86400)*24)
+Custom-GuestOSUptime-Minutes = floor(${this, metric=sys|osUptime_latest}/60)-(floor(${this, metric=sys|osUptime_latest}/3600)*60)
+Custom-GuestOSUptime-Seconds = ${this, metric=sys|osUptime_latest}-(floor(${this, metric=sys|osUptime_latest}/60)*60)
